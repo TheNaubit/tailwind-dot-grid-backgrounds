@@ -1,0 +1,40 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "es2024": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "prettier",
+    "eslint-config-prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "eslint-plugin-prettier"],
+  "rules": {
+    "no-console": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": false,
+        "semi": true,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "printWidth": 80,
+        "endOfLine": "lf",
+        "indent": ["error", 2],
+        "arrowParens": "avoid"
+      },
+      {
+        "usePrettierrc": false
+      }
+    ]
+  }
+}
