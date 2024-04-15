@@ -21,7 +21,6 @@
 <p align="center">
   <a href="#what">What?</a> •
   <a href="#why">Why?</a> •
-  <a href="#how">How?</a> •
   <a href="#typescript">TypeScript</a> •
   <a href="#guide-and-examples">Guide and examples</a> •
   <a href="#help">Help</a> •
@@ -29,28 +28,95 @@
 </p>
 
 ## tl;dr
-If you just want to try and you don't want to read this guide right now (although you should in the future if you decide to use the library), you can start quickly by:
+This is a Tailwind plugin that allows you to add background grids and background dots in an easy and customizable way:
 
 ### 1. Installing the dependency:
 ```bash
 npm install --save @nauverse/tailwind-dot-grid-backgrounds
 ```
 
-### 2. Checking this example of use:
-~~~ts
-import { makeURL } from "@nauverse/tailwind-dot-grid-backgrounds";
+### 2. Add the plugin to the `tailwind.config.js` file:
+~~~js
+// ... the rest of your tailwind.config.js file
 
-makeURL("https://api.example.com/", "/:id/:param2/:id///", {
-  params: {
-    id: 1,
-    param2: "678"
-  }
-});
-// https://api.example.com/1/678/1
+const config: Config = {
+  // ... the rest of your config
+  plugins: [
+    require('@nauverse/tailwind-dot-grid-backgrounds')
+    // ... the rest of your Tailwind plugins
+  ],
+};
 ~~~
-> I added too many slashes intentionally to showcase they can be removed automatically (you also have an option to disable that)
-
-If you want to see more examples, jump to [here](#full-examples).
 
 ### 3. You are done! 🪄
-Feel free to test and explore and if later on you need more guidance, read the whole guide and ask in the GitHub repo.
+Try it by adding this HTML to your UI:
+```html
+<div class="h-screen w-screen bg-yellow-300 bg-grid-8-s-2-neutral-950"></div>
+```
+
+## Help
+
+Thank you for using *tailwind-dot-grid-backgrounds*!
+
+If you need any help using this plugin, feel free to [create a GitHub issue](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/issues/new/choose), and ask your questions. I'll try to answer as quickly as possible.
+
+## Contribute
+
+Contributions of any kind (pull requests, bug reports, feature requests, documentation, design) are more than welcome! If you like this project and want to help, but feel like you are stuck, feel free to contact the maintainers.
+
+### Building from source
+
+Building the project should be quick and easy. If it isn't, it's the maintainer's fault. Please report any problems with building in a GitHub issue.
+
+You need to have a reasonably recent version of node.js to build *tailwind-dot-grid-backgrounds*. 
+Tested on node version 18.0.0 and npm version 8.6.0.
+
+First, clone the git repository:
+
+```
+git clone git@github.com:TheNaubit/tailwind-dot-grid-backgrounds.git
+```
+
+Then switch to the newly created tailwind-dot-grid-backgrounds directory and install the dependencies:
+
+```
+cd tailwind-dot-grid-backgrounds
+npm install
+```
+
+You can then run the unit tests to verify that everything works correctly:
+
+```
+npm run test:run
+```
+
+And finally, build the library:
+
+```
+npm run build
+```
+
+The output will appear in the `dist` directory.
+
+Happy hacking!
+
+## Contributors ✨
+
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
