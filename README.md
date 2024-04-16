@@ -78,12 +78,12 @@ Pattern: `bg-grid-<SIZE>-s-<STROKE_WIDTH>-<COLOR>`
 #### Examples:
 `bg-grid-8-s-2-neutral-950`
 <p align="center">
-  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/blob/92a8b6c3f527533ded1f497f035c8515c85cb995/images/header.png" alt="tailwind-dot-grid-backgrounds" />
+  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/blob/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-grid-8-s-2-neutral-950.png" alt="tailwind-dot-grid-backgrounds bg-grid-8-s-2-neutral-950" />
 </p>
 
 `bg-grid-48-s-8-blue-700/80`
 <p align="center">
-  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/blob/92a8b6c3f527533ded1f497f035c8515c85cb995/images/header.png" alt="tailwind-dot-grid-backgrounds" />
+  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/blob/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-grid-48-s-8-blue-700_80.png" alt="tailwind-dot-grid-backgrounds bg-grid-48-s-8-blue-700/80" />
 </p>
 
 ### Background Dots
@@ -96,12 +96,12 @@ Pattern: `bg-dot-<SIZE>-s-<DOT_SIZE>-<COLOR>`
 #### Examples:
 `bg-dot-8-s-2-neutral-950`
 <p align="center">
-  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/blob/92a8b6c3f527533ded1f497f035c8515c85cb995/images/header.png" alt="tailwind-dot-grid-backgrounds" />
+  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/blob/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-dot-8-s-2-neutral-950.png" alt="tailwind-dot-grid-backgrounds bg-dot-8-s-2-neutral-950" />
 </p>
 
 `bg-dot-16-s-8-blue-700/80`
 <p align="center">
-  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/blob/92a8b6c3f527533ded1f497f035c8515c85cb995/images/header.png" alt="tailwind-dot-grid-backgrounds" />
+  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/blob/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-dot-16-s-8-blue-700_80.png" alt="tailwind-dot-grid-backgrounds bg-dot-16-s-8-blue-700/80" />
 </p>
 
 ## Help
