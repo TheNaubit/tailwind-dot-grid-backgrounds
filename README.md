@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/images/header.png" alt="tailwind-dot-grid-backgrounds" />
+  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/blob/92a8b6c3f527533ded1f497f035c8515c85cb995/images/header.png" alt="tailwind-dot-grid-backgrounds" />
 </p>
 
 <h4 align="center">A tiny Tailwind plugin to add dot and grid customizable backgrounds fast</h4>
