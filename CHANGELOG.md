@@ -1,4 +1,9 @@
-# 1.1.0 (2024-04-16)
+# 1.2.0 (2024-04-16)
+
+
+### Bug Fixes
+
+* update package-lock.json and package.json to use Vite 5.2.9 ([85bddfc](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/85bddfce42dc4e91f9dbccb0f940dc3e14a31081))
 
 
 ### Features
