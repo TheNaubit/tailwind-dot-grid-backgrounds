@@ -20,8 +20,6 @@
 
 <p align="center">
   <a href="#what">What?</a> •
-  <a href="#why">Why?</a> •
-  <a href="#typescript">TypeScript</a> •
   <a href="#guide-and-examples">Guide and examples</a> •
   <a href="#help">Help</a> •
   <a href="#contribute">Contribute</a>
@@ -53,6 +51,35 @@ Try it by adding this HTML to your UI:
 ```html
 <div class="h-screen w-screen bg-yellow-300 bg-grid-8-s-2-neutral-950"></div>
 ```
+
+## What
+You could achieve the same by just using some Tailwind code but... I found myself adding this kind of background in my projects very often. So I created a small Tailwind plugin to allow me adding these background but at the same allowing all the customization offered by Tailwind.
+
+## Guide and examples
+
+### Background Grid
+Pattern: `bg-grid-<SIZE>-s-<STROKE_WIDTH>-<COLOR>`
+
+- `<SIZE>` is the size of the grid squares. It allows the numeric values of the `width` prop in Tailwind. You will see the available options in Intellisense.
+- `<STROKE_WIDTH>` is the width of the strokes of the grid squares. It allows the numeric values of the `borderWidth` prop in Tailwind and also the value `1` (since Tailwind does not have a `border-1` class).
+- `<COLOR>` is the color of the strokes. It allows any valid classname color in Tailwind.
+
+#### Examples:
+`bg-grid-8-s-2-neutral-950`
+
+`bg-grid-48-s-8-blue-700/80`
+
+### Background Dots
+Pattern: `bg-dot-<SIZE>-s-<DOT_SIZE>-<COLOR>`
+
+- `<SIZE>` is the size of the space (in both axis) between the dots. It allows the numeric values of the `width` prop in Tailwind. You will see the available options in Intellisense.
+- `<DOT_SIZE>` is the size of the dots. It allows the numeric values of the `borderWidth` prop in Tailwind and also the value `1` (since Tailwind does not have a `border-1` class).
+- `<COLOR>` is the color of the dots. It allows any valid classname color in Tailwind.
+
+#### Examples:
+`bg-dot-8-s-2-neutral-950`
+
+`bg-dot-48-s-8-blue-700/80`
 
 ## Help
 
