@@ -77,8 +77,14 @@ Pattern: `bg-grid-<SIZE>-s-<STROKE_WIDTH>-<COLOR>`
 
 #### Examples:
 `bg-grid-8-s-2-neutral-950`
+<p align="center">
+  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/blob/92a8b6c3f527533ded1f497f035c8515c85cb995/images/header.png" alt="tailwind-dot-grid-backgrounds" />
+</p>
 
 `bg-grid-48-s-8-blue-700/80`
+<p align="center">
+  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/blob/92a8b6c3f527533ded1f497f035c8515c85cb995/images/header.png" alt="tailwind-dot-grid-backgrounds" />
+</p>
 
 ### Background Dots
 Pattern: `bg-dot-<SIZE>-s-<DOT_SIZE>-<COLOR>`
@@ -89,8 +95,14 @@ Pattern: `bg-dot-<SIZE>-s-<DOT_SIZE>-<COLOR>`
 
 #### Examples:
 `bg-dot-8-s-2-neutral-950`
+<p align="center">
+  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/blob/92a8b6c3f527533ded1f497f035c8515c85cb995/images/header.png" alt="tailwind-dot-grid-backgrounds" />
+</p>
 
-`bg-dot-48-s-8-blue-700/80`
+`bg-dot-16-s-8-blue-700/80`
+<p align="center">
+  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/blob/92a8b6c3f527533ded1f497f035c8515c85cb995/images/header.png" alt="tailwind-dot-grid-backgrounds" />
+</p>
 
 ## Help
 
