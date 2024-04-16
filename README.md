@@ -3,6 +3,10 @@
   <br>
 </h1>
 
+<p align="center">
+  <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/images/header.png" alt="tailwind-dot-grid-backgrounds" />
+</p>
+
 <h4 align="center">A tiny Tailwind plugin to add dot and grid customizable backgrounds fast</h4>
 
 <p align="center">
