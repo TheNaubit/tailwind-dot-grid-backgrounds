@@ -59,6 +59,13 @@ Try it by adding this HTML to your UI:
 ## What
 You could achieve the same by just using some Tailwind code but... I found myself adding this kind of background in my projects very often. So I created a small Tailwind plugin to allow me adding these background but at the same allowing all the customization offered by Tailwind.
 
+### Features
+- 🎨 Fully integrated with Tailwind CSS
+- 🏃‍♂️ Performant (it uses CSS to render the backgrounds)
+- 0️⃣ Zero dependencies
+- 🧪 Has tests!
+- 🎉 Easy to use, straight to the point
+
 ## Guide and examples
 
 ### Background Grid
