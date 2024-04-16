@@ -1,3 +1,12 @@
+## [1.2.2](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.1...v1.2.2) (2024-04-16)
+
+
+### Bug Fixes
+
+* update README.md with header image ([ee7b78e](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/ee7b78e6fa689009727d747fd5eaa9dda923fd04))
+
+
+
 ## [1.2.1](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.0...v1.2.1) (2024-04-16)
 
 
