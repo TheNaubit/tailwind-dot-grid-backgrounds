@@ -1,4 +1,14 @@
-# 1.2.0 (2024-04-16)
+## [1.2.1](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.0...v1.2.1) (2024-04-16)
+
+
+### Bug Fixes
+
+* fixed contributors badge in readme ([ead202f](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/ead202f6c2bb907bd8c4536a9002706c55416a6c))
+* fixed readme ([6313120](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/631312087e71d037812196a8adeaafef639c2db1))
+
+
+
+# [1.2.0](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/eb65c3a1503eb4e7c09c03b4d4cddf7a26405954...v1.2.0) (2024-04-16)
 
 
 ### Bug Fixes
