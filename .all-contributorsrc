@@ -1,0 +1,31 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "TheNaubit",
+      "name": "Al | Naucode",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22015497?v=4",
+      "profile": "https://albertadler.com",
+      "contributions": [
+        "bug",
+        "code",
+        "doc",
+        "maintenance",
+        "infra",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "tailwind-dot-grid-backgrounds",
+  "projectOwner": "TheNaubit"
+}
