@@ -1,3 +1,12 @@
+## [1.2.9](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.8...v1.2.9) (2024-07-02)
+
+
+### Bug Fixes
+
+* disabled publishing to jsr.io ([5992f1d](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/5992f1d4352ec64ef08cba778ea36a545df32357))
+
+
+
 ## [1.2.8](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.7...v1.2.8) (2024-07-02)
 
 
@@ -32,15 +41,6 @@
 ### Bug Fixes
 
 * updated readme with images ([f3e198f](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/f3e198f24753093bf2b4284fba69b94bcd66c3b5))
-
-
-
-## [1.2.4](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.3...v1.2.4) (2024-04-16)
-
-
-### Bug Fixes
-
-* updated readme ([53f51e0](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/53f51e0466d573fae813a4dd9ec9c3d4e8c1f127))
 
 
 
