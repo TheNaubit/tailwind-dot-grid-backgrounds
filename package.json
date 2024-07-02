@@ -23,7 +23,7 @@
     "grid-background",
     "dot-background"
   ],
-  "version": "1.2.7",
+  "version": "1.2.8",
   "type": "module",
   "main": "./dist/tailwind-dot-grid-backgrounds.umd.cjs",
   "module": "./dist/tailwind-dot-grid-backgrounds.js",

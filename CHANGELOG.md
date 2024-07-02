@@ -1,3 +1,13 @@
+## [1.2.8](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.7...v1.2.8) (2024-07-02)
+
+
+### Bug Fixes
+
+* added first version of jsr.io support ([8bca83d](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/8bca83dcc05aa97891aa6b2df33798f410d20a5b))
+* updated dev dependencies ([e9bec80](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/e9bec80cfda87edd2426432df75304214469af27))
+
+
+
 ## [1.2.7](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.6...v1.2.7) (2024-05-20)
 
 
@@ -31,15 +41,6 @@
 ### Bug Fixes
 
 * updated readme ([53f51e0](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/53f51e0466d573fae813a4dd9ec9c3d4e8c1f127))
-
-
-
-## [1.2.3](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.2...v1.2.3) (2024-04-16)
-
-
-### Bug Fixes
-
-* fixed readme image ([0fc75f2](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/0fc75f26f42591bf7c2cd54c714565eb30ca09aa))
 
 
 
