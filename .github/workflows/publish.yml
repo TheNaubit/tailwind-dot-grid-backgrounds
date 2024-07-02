@@ -28,9 +28,6 @@ jobs:
       - name: Run Tests
         run: npm run test:run
 
-      - name: Publish package
-        run: npx jsr publish
-
       - name: Build
         run: npm run build
 

@@ -1,5 +1,0 @@
-{
-  "name": "@nauverse/tailwind-dot-grid-backgrounds",
-  "version": "1.2.8",
-  "exports": "./src/index.ts"
-}
