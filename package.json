@@ -59,7 +59,7 @@
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
     "@types/eslint": "8.56.10",
-    "@types/node": "20.14.9",
+    "@types/node": "20.14.11",
     "@typescript-eslint/eslint-plugin": "7.15.0",
     "@typescript-eslint/parser": "7.15.0",
     "@vitest/coverage-v8": "1.6.0",
