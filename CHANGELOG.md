@@ -1,3 +1,12 @@
+## [1.2.12](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.11...v1.2.12) (2024-10-04)
+
+
+### Bug Fixes
+
+* fixed linter issue ([1ab0298](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/1ab0298235a4e42b6bf7883ddf3a140c63e3e2d2))
+
+
+
 ## [1.2.11](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.10...v1.2.11) (2024-10-04)
 
 
@@ -32,15 +41,6 @@
 
 * added first version of jsr.io support ([8bca83d](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/8bca83dcc05aa97891aa6b2df33798f410d20a5b))
 * updated dev dependencies ([e9bec80](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/e9bec80cfda87edd2426432df75304214469af27))
-
-
-
-## [1.2.7](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.6...v1.2.7) (2024-05-20)
-
-
-### Bug Fixes
-
-* updated vite config ([2c3ced2](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/2c3ced259ee88207478f4e4eea3f67345f7a2069))
 
 
 
