@@ -1,3 +1,12 @@
+## [1.2.10](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.9...v1.2.10) (2024-10-04)
+
+
+### Bug Fixes
+
+* updated dependencies, optimized code and moved to biome ([03fd838](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/03fd838f7491b35a75b0b95836cc4d238b2af79b))
+
+
+
 ## [1.2.9](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.8...v1.2.9) (2024-07-02)
 
 
@@ -32,15 +41,6 @@
 ### Bug Fixes
 
 * fixed readme images ([92d223d](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/92d223d86e4b99e32feb93ab2380568e9e5de2ec))
-
-
-
-## [1.2.5](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.4...v1.2.5) (2024-04-16)
-
-
-### Bug Fixes
-
-* updated readme with images ([f3e198f](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/f3e198f24753093bf2b4284fba69b94bcd66c3b5))
 
 
 
