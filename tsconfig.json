@@ -1,46 +1,46 @@
 {
-  "extends": [],
-  "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    // The types defined in "vite/client" are included in global scope.
-    "types": ["vite/client"],
-    // Skip the type checking for declaration files to improve performance.
-    "skipLibCheck": true,
-    // "declarationMap" need to be enabled to let Vite generates source map files.
-    "declaration": true,
-    "declarationMap": true,
-    // Importing .js files is not allowed, enable if needed.
-    "allowJs": false,
-    // Fix the mis-match of behaviors between ES import and CommonJS require.
-    "esModuleInterop": true,
-    // Enforce the file name casing to be consistent with development environment.
-    "forceConsistentCasingInFileNames": true,
-    // Ensure the run-time code does not depend on the TypeScript-only features, such as constant enum.
-    "isolatedModules": true,
-    // Allow importing TypeScript modules.
-    "allowImportingTsExtensions": true,
-    // Enfore "type" modifier for type imports.
-    "verbatimModuleSyntax": true,
-    // Ensure the public class field initialization is transpiled correctly to match the future JS standard.
-    "useDefineForClassFields": true,
-    // Type-checking options
-    "strict": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+	"extends": [],
+	"compilerOptions": {
+		"target": "ES2020",
+		"module": "ESNext",
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		// The types defined in "vite/client" are included in global scope.
+		"types": ["vite/client"],
+		// Skip the type checking for declaration files to improve performance.
+		"skipLibCheck": true,
+		// "declarationMap" need to be enabled to let Vite generates source map files.
+		"declaration": true,
+		"declarationMap": true,
+		// Importing .js files is not allowed, enable if needed.
+		"allowJs": false,
+		// Fix the mis-match of behaviors between ES import and CommonJS require.
+		"esModuleInterop": true,
+		// Enforce the file name casing to be consistent with development environment.
+		"forceConsistentCasingInFileNames": true,
+		// Ensure the run-time code does not depend on the TypeScript-only features, such as constant enum.
+		"isolatedModules": true,
+		// Allow importing TypeScript modules.
+		"allowImportingTsExtensions": true,
+		// Enfore "type" modifier for type imports.
+		"verbatimModuleSyntax": true,
+		// Ensure the public class field initialization is transpiled correctly to match the future JS standard.
+		"useDefineForClassFields": true,
+		// Type-checking options
+		"strict": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noImplicitThis": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
 
-    /* Bundler mode */
-    "moduleResolution": "Bundler",
-    "resolveJsonModule": true,
-    // Do not emit compiled output files, vite will take care of the that.
-    "noEmit": true
-  },
-  "include": ["src"]
+		/* Bundler mode */
+		"moduleResolution": "Bundler",
+		"resolveJsonModule": true,
+		// Do not emit compiled output files, vite will take care of the that.
+		"noEmit": true
+	},
+	"include": ["src"]
 }

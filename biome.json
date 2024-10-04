@@ -1,0 +1,29 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"correctness": {
+				"noUnusedImports": "error"
+			}
+		},
+		"ignore": [
+			"dist",
+			".DS_Store",
+			"node_modules",
+			"coverage",
+			"./**/*.d.ts",
+			"./**/*.json",
+			"vite.config.ts"
+		]
+	}
+}
