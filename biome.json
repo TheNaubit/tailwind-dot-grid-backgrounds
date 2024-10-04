@@ -3,6 +3,17 @@
 	"organizeImports": {
 		"enabled": true
 	},
+	"files": {
+		"ignore": [
+			"dist",
+			".DS_Store",
+			"node_modules",
+			"coverage",
+			"./**/*.d.ts",
+			"./**/*.json",
+			"vite.config.ts"
+		]
+	},
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
@@ -15,15 +26,6 @@
 			"correctness": {
 				"noUnusedImports": "error"
 			}
-		},
-		"ignore": [
-			"dist",
-			".DS_Store",
-			"node_modules",
-			"coverage",
-			"./**/*.d.ts",
-			"./**/*.json",
-			"vite.config.ts"
-		]
+		}
 	}
 }
