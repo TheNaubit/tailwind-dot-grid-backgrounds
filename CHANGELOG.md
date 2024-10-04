@@ -1,3 +1,12 @@
+## [1.2.11](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.10...v1.2.11) (2024-10-04)
+
+
+### Bug Fixes
+
+* fixed github workflows ([d46ee68](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/d46ee68b770968656f82fd833372c85f7e8246bf))
+
+
+
 ## [1.2.10](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.9...v1.2.10) (2024-10-04)
 
 
@@ -32,15 +41,6 @@
 ### Bug Fixes
 
 * updated vite config ([2c3ced2](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/2c3ced259ee88207478f4e4eea3f67345f7a2069))
-
-
-
-## [1.2.6](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.5...v1.2.6) (2024-04-16)
-
-
-### Bug Fixes
-
-* fixed readme images ([92d223d](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/92d223d86e4b99e32feb93ab2380568e9e5de2ec))
 
 
 
