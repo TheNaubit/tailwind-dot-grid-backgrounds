@@ -1,75 +1,73 @@
 {
-  "name": "@nauverse/tailwind-dot-grid-backgrounds",
-  "description": "🎨 A tiny Tailwind plugin to add dot and grid customizable backgrounds fast",
-  "author": {
-    "name": "Albert Adler | @IAmAlbertAdler",
-    "url": "https://albertadler.com"
-  },
-  "license": "MIT",
-  "homepage": "https://github.com/TheNaubit/tailwind-dot-grid-backgrounds",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TheNaubit/tailwind-dot-grid-backgrounds.git"
-  },
-  "bugs": {
-    "url": "https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/issues"
-  },
-  "keywords": [
-    "tailwind",
-    "tailwindcss",
-    "tailwindcss-plugin",
-    "tailwindcss-grid-background",
-    "tailwindcss-dot-background",
-    "grid-background",
-    "dot-background"
-  ],
-  "version": "1.2.10",
-  "type": "module",
-  "main": "./dist/tailwind-dot-grid-backgrounds.umd.cjs",
-  "module": "./dist/tailwind-dot-grid-backgrounds.js",
-  "types": "./dist/index.d.ts",
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "exports": {
-    ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/tailwind-dot-grid-backgrounds.js"
-      },
-      "require": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/tailwind-dot-grid-backgrounds.umd.cjs"
-      }
-    }
-  },
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "tsc && vite build",
-    "test": "vitest",
-    "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "lint": "biome check",
-    "lint:fix": "biome check --write",
-    "prepare": "husky"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.3",
-    "@commitlint/cli": "19.5.0",
-    "@commitlint/config-conventional": "19.5.0",
-    "@types/node": "22.7.4",
-    "@vitest/coverage-v8": "2.1.2",
-    "husky": "9.1.6",
-    "tailwindcss": "3.4.13",
-    "postcss": "8.4.47",
-    "typescript": "5.6.2",
-    "vite": "5.4.8",
-    "vite-plugin-dts": "4.2.3",
-    "vitest": "2.1.2"
-  },
-  "peerDependencies": {
-    "tailwindcss": ">=3.4.0"
-  }
+	"name": "@nauverse/tailwind-dot-grid-backgrounds",
+	"description": "🎨 A tiny Tailwind plugin to add dot and grid customizable backgrounds fast",
+	"author": {
+		"name": "Albert Adler | @IAmAlbertAdler",
+		"url": "https://albertadler.com"
+	},
+	"license": "MIT",
+	"homepage": "https://github.com/TheNaubit/tailwind-dot-grid-backgrounds",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/TheNaubit/tailwind-dot-grid-backgrounds.git"
+	},
+	"bugs": {
+		"url": "https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/issues"
+	},
+	"keywords": [
+		"tailwind",
+		"tailwindcss",
+		"tailwindcss-plugin",
+		"tailwindcss-grid-background",
+		"tailwindcss-dot-background",
+		"grid-background",
+		"dot-background"
+	],
+	"version": "1.2.10",
+	"type": "module",
+	"main": "./dist/tailwind-dot-grid-backgrounds.umd.cjs",
+	"module": "./dist/tailwind-dot-grid-backgrounds.js",
+	"types": "./dist/index.d.ts",
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/tailwind-dot-grid-backgrounds.js"
+			},
+			"require": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/tailwind-dot-grid-backgrounds.umd.cjs"
+			}
+		}
+	},
+	"files": ["dist"],
+	"scripts": {
+		"build": "tsc && vite build",
+		"test": "vitest",
+		"test:run": "vitest run",
+		"test:coverage": "vitest run --coverage",
+		"lint": "biome check",
+		"lint:fix": "biome check --write",
+		"prepare": "husky"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.3",
+		"@commitlint/cli": "19.5.0",
+		"@commitlint/config-conventional": "19.5.0",
+		"@types/node": "22.7.4",
+		"@vitest/coverage-v8": "2.1.2",
+		"husky": "9.1.6",
+		"tailwindcss": "3.4.13",
+		"postcss": "8.4.47",
+		"typescript": "5.6.2",
+		"vite": "5.4.8",
+		"vite-plugin-dts": "4.2.3",
+		"vitest": "2.1.2"
+	},
+	"peerDependencies": {
+		"tailwindcss": ">=3.4.0"
+	}
 }
