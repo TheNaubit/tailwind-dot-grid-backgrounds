@@ -1,55 +1,46 @@
-// @ts-expect-error - flattenColorPalette file does not export a type declaration
-import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
-import plugin from "tailwindcss/plugin";
-import type { PluginAPI } from "tailwindcss/types/config";
+// The ".js" extension is required: Tailwind CSS v3 has no "exports" map, so Node ESM needs the full file name.
+import plugin from "tailwindcss/plugin.js";
+import type { CSSRuleObject, PluginAPI } from "tailwindcss/types/config.js";
+import { flattenColors, strokeWidths, toPxEntries } from "./theme-values.js";
 
-const REM_TO_PX = 16; // 1rem = 16px
+type UtilityFactory = (color: string) => CSSRuleObject;
+
+function gridBackground(size: number, stroke: number): UtilityFactory {
+	return (color) => ({
+		backgroundImage: `linear-gradient(to right, ${color} ${stroke}px, transparent ${stroke}px),linear-gradient(to bottom, ${color} ${stroke}px, transparent ${stroke}px)`,
+		backgroundSize: `${size}px ${size}px`,
+	});
+}
+
+function dotBackground(size: number, dotSize: number): UtilityFactory {
+	return (color) => ({
+		backgroundImage: `radial-gradient(${color} ${dotSize}px, transparent ${dotSize}px)`,
+		backgroundSize: `${size}px ${size}px`,
+	});
+}
 
 const tailwindDotGridBackgrounds = plugin(
-	({
-		matchUtilities,
-		theme,
-	}: {
-		matchUtilities: PluginAPI["matchUtilities"];
-		theme: PluginAPI["theme"];
-	}) => {
-		// Obtain the color palette from the theme
-		const colorPalette = flattenColorPalette(theme("backgroundColor"));
+	({ matchUtilities, theme }: PluginAPI) => {
+		// Colors come from the "backgroundColor" theme (it includes "colors").
+		const colors = flattenColors(theme("backgroundColor"));
 
-		// The border widths from Tailwind CSS will be the values used for the grid stoke widths. We also add the value "1" to the list of border widths (since Tailwind CSS does not include it by default).
-		const borderWidths = ["1", ...Object.keys(theme("borderWidth"))];
+		// Stroke widths (grid) and dot sizes come from the "borderWidth" theme, plus "1".
+		const strokes = strokeWidths(theme("borderWidth"));
 
-		// For the sizes (the size of the squares in the grid or the distance between the dots in the dotted background), we will use the numeric width values from the "width" theme object. We will filter out the values that are not in "rem" units and convert the remaining values to pixels.
-		const numericWidths: Array<[string, number]> = (
-			Object.entries(theme("width")) as Array<[string, string]>
-		)
-			.filter(([, value]) => value.endsWith("rem"))
-			.map(([key, value]) => [
-				key,
-				Number.parseFloat(value.replace("rem", "")) * REM_TO_PX,
-			]);
+		// Grid square sizes and dot spacings come from the "width" theme values expressed in px or rem.
+		const sizes = toPxEntries(theme("width"));
 
-		// Now iterate to generate all the utility classes
-		for (const borderWidth of borderWidths) {
-			for (const [widthKey, widthValue] of numericWidths) {
+		// Tailwind types color values as strings, but a palette may also contain functions: both are handled by matchUtilities.
+		const values = colors as Record<string, string>;
+
+		for (const [strokeKey, stroke] of strokes) {
+			for (const [sizeKey, size] of sizes) {
 				matchUtilities(
 					{
-						// This key is for the square grid background
-						[`bg-grid-${widthKey}-s-${borderWidth}`]: (colorValue: string) => {
-							return {
-								backgroundImage: `linear-gradient(to right, ${colorValue} ${borderWidth}px, transparent ${borderWidth}px),linear-gradient(to bottom, ${colorValue} ${borderWidth}px, transparent ${borderWidth}px)`,
-								backgroundSize: `${widthValue}px ${widthValue}px`,
-							};
-						},
-						// And this key is for the dotted background
-						[`bg-dot-${widthKey}-s-${borderWidth}`]: (colorValue: string) => {
-							return {
-								backgroundImage: `radial-gradient(${colorValue} ${borderWidth}px, transparent ${borderWidth}px)`,
-								backgroundSize: `${widthValue}px ${widthValue}px`,
-							};
-						},
+						[`bg-grid-${sizeKey}-s-${strokeKey}`]: gridBackground(size, stroke),
+						[`bg-dot-${sizeKey}-s-${strokeKey}`]: dotBackground(size, stroke),
 					},
-					{ values: colorPalette, type: "color" },
+					{ values, type: "color" },
 				);
 			}
 		}
