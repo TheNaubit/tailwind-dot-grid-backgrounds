@@ -56,13 +56,15 @@ scripts/render-header.mjs  renders the header with the plugin and headless Chrom
 - Use Conventional Commits: `feat:`, `fix:`, `refactor:`, `docs:`, `test:`, `chore:`, `perf:`, `ci:`.
 - Do not add "Co-Authored-By" or similar lines to commit messages.
 - `semantic-release` runs in `.github/workflows/release.yml` on pushes to `main` and `v1`. It sets the version, updates `CHANGELOG.md`, tags, creates the GitHub release and publishes. Do not bump `version` by hand.
-- `v1` is a maintenance branch (`1.x`) published under the npm dist-tag `v1`. See `.releaserc.json`.
+- `v1` is a maintenance branch (`1.x`) published under the npm dist-tag `release-v1` (semantic-release prefixes channels that look like a version range). See `.releaserc.json`.
 - Publishing uses npm trusted publishing (OIDC) for `TheNaubit/tailwind-dot-grid-backgrounds`, `release.yml` and the `npm` environment. There is no `NPM_TOKEN` or personal access token. Do not add one. If you rename the workflow file or the environment, update the trusted publisher on npm.
 - Before you publish, check the tarball with `npm pack --dry-run`. It must only contain `index.css`, `README.md`, `LICENSE` and `package.json`.
 - Every action in `.github/workflows` is pinned to a commit SHA with the version in a comment. Keep it that way. Check workflows with `actionlint` and `zizmor`.
 
 ## Gotchas
 
+- npm trusted publishing (OIDC) can publish but cannot change dist-tags (`npm dist-tag add` returns 401). semantic-release only needs that when it adds an existing version to another channel, which the normal flow does not do.
+- semantic-release stores the channels of each release in git notes (`refs/notes/semantic-release-<tag>`) on the tagged commit. `v1.2.13` and older are annotated tags from the previous release tool: semantic-release attached its note to the tag object, where it cannot read it back. The note for `v1.2.13` was added to its commit by hand. Do not delete the notes refs.
 - Colors accept `[*]` so that `bg-grid-(--my-color)` works. As in Tailwind CSS itself, arbitrary values are not validated.
 - `bg-grid-current` and `bg-dot-current` are static utilities, so they take no opacity modifier.
 - The six `@property` rules are emitted whenever the plugin is imported. Tailwind CSS does not hoist `@property` from inside `@utility`.

@@ -9,7 +9,7 @@
   "homepage": "https://github.com/TheNaubit/tailwind-dot-grid-backgrounds#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TheNaubit/tailwind-dot-grid-backgrounds.git"
+    "url": "git+https://github.com/TheNaubit/tailwind-dot-grid-backgrounds.git"
   },
   "bugs": {
     "url": "https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/issues"
