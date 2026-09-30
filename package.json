@@ -1,6 +1,6 @@
 {
   "name": "@nauverse/tailwind-dot-grid-backgrounds",
-  "description": "🎨 A tiny Tailwind plugin to add dot and grid customizable backgrounds fast",
+  "description": "A tiny Tailwind CSS v4 plugin to add customizable dot and grid backgrounds fast, in pure CSS",
   "author": {
     "name": "Albert Adler | @IAmAlbertAdler",
     "url": "https://albertadler.com"
@@ -17,62 +17,52 @@
   "keywords": [
     "tailwind",
     "tailwindcss",
+    "tailwindcss-v4",
     "tailwindcss-plugin",
-    "tailwindcss-grid-background",
-    "tailwindcss-dot-background",
+    "css",
     "grid-background",
-    "dot-background"
+    "dot-background",
+    "background-pattern"
   ],
   "version": "1.2.13",
   "type": "module",
-  "main": "./dist/tailwind-dot-grid-backgrounds.umd.cjs",
-  "module": "./dist/tailwind-dot-grid-backgrounds.js",
-  "types": "./dist/index.d.ts",
-  "engines": {
-    "node": ">=22.0.0"
-  },
+  "style": "./index.css",
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/tailwind-dot-grid-backgrounds.js"
-      },
-      "require": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/tailwind-dot-grid-backgrounds.umd.cjs"
-      }
-    }
+      "style": "./index.css",
+      "default": "./index.css"
+    },
+    "./index.css": "./index.css",
+    "./package.json": "./package.json"
   },
   "files": [
-    "dist"
+    "index.css"
+  ],
+  "sideEffects": [
+    "*.css"
   ],
   "scripts": {
-    "build": "tsc --noEmit && vite build && tsc -p tsconfig.build.json",
     "test": "vitest",
     "test:run": "vitest run",
-    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
     "lint": "biome check",
     "lint:fix": "biome check --write",
-    "prepare": "husky",
-    "typecheck": "tsc --noEmit"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.14",
     "@commitlint/cli": "21.2.3",
     "@commitlint/config-conventional": "21.2.3",
+    "@tailwindcss/node": "4.3.3",
     "@types/node": "24.19.0",
-    "@vitest/coverage-v8": "5.0.2",
     "husky": "9.1.7",
-    "postcss": "8.5.28",
-    "tailwindcss": "3.4.19",
+    "tailwindcss": "4.3.3",
     "typescript": "7.0.2",
-    "vite": "8.3.1",
     "vitest": "5.0.2"
   },
   "peerDependencies": {
-    "tailwindcss": "^3.4.0"
+    "tailwindcss": "^4.0.0"
   },
-  "sideEffects": false,
   "devEngines": {
     "runtime": {
       "name": "node",
