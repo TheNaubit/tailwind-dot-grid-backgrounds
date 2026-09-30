@@ -1,8 +1,8 @@
-name: Releases
+name: Release
 
 on:
   push:
-    # "main" releases the current major, "v1" the Tailwind CSS v3 maintenance line.
+    # "main" releases the current major, "v1" the Tailwind CSS v3 maintenance line (npm dist-tag "v1").
     branches: [main, v1]
 
 permissions: {}
@@ -12,38 +12,50 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  changelog:
+  release:
+    name: Test & Release
     runs-on: ubuntu-26.04
+    # Must match the environment configured in the npm trusted publisher settings.
+    environment: npm
     permissions:
+      # Push the release commit and tag, create the GitHub release
       contents: write
+      # Comment on the issues and pull requests included in a release
+      issues: write
+      pull-requests: write
+      # npm trusted publishing (OIDC) and provenance: no npm token is stored in the repository
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
-          # The changelog action configures its own authenticated remote to push the release commit and tag.
+          # semantic-release authenticates its own pushes with GITHUB_TOKEN
           persist-credentials: false
 
-      # A personal access token is needed so the pushed tag and the created release trigger other workflows.
-      - name: Conventional Changelog Action
-        id: changelog
-        uses: TriPSs/conventional-changelog-action@469f0e5e35831fbd1962706f29f65daf0a5723f2 # v6.5.0
+      - name: Setup Node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          github-token: ${{ secrets.PA_TOKEN }}
-          version-file: "./package.json,./package-lock.json"
+          node-version-file: ".nvmrc"
+          # No dependency cache when building a release artifact (avoids cache poisoning)
+          package-manager-cache: false
 
-      - name: Create release
-        if: ${{ steps.changelog.outputs.skipped == 'false' }}
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Static analysis
+        run: npm run lint
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Run tests
+        run: npm run test:run
+
+      - name: Build
+        run: npm run build
+
+      - name: Release
         env:
-          GH_TOKEN: ${{ secrets.PA_TOKEN }}
-          TAG: ${{ steps.changelog.outputs.tag }}
-          NOTES: ${{ steps.changelog.outputs.clean_changelog }}
-          # Only releases from the default branch are marked as the repository's latest release.
-          LATEST: ${{ github.ref_name == github.event.repository.default_branch }}
-        run: |
-          printf '%s' "$NOTES" > "$RUNNER_TEMP/notes.md"
-          gh release create "$TAG" \
-            --title "$TAG" \
-            --notes-file "$RUNNER_TEMP/notes.md" \
-            --target "$GITHUB_SHA" \
-            --latest="$LATEST"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx --no-install semantic-release
