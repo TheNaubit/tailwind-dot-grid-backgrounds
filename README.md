@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/v1/images/header.png" alt="tailwind-dot-grid-backgrounds" />
+  <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/v1/images/header.png" alt="tailwind-dot-grid-backgrounds: dot and grid backgrounds for Tailwind CSS" />
 </p>
 
 <h4 align="center">A tiny Tailwind CSS plugin to add dot and grid customizable backgrounds fast</h4>
@@ -33,10 +33,10 @@
 >
 > Using **Tailwind CSS v4**? Use the latest version instead (`v2` and later). It is a pure CSS plugin with no JavaScript, loaded with `@import "@nauverse/tailwind-dot-grid-backgrounds";`. See the [main branch README](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds#readme) for its guide and the migration steps.
 
-| Plugin version | Tailwind CSS | Node.js | Branch |
-| -------------- | ------------ | ------- | ------ |
-| `2.x`          | `>=4.1`      | Same as Tailwind CSS v4 | [`main`](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/tree/main) |
-| `1.x`          | `^3.4`       | `>=22`  | [`v1`](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/tree/v1) (maintenance) |
+| Plugin version | Tailwind CSS | How it works | Branch |
+| -------------- | ------------ | ------------ | ------ |
+| `2.x` (latest) | `^4.0`       | Pure CSS (`@utility`), no JavaScript | [`main`](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/tree/main) |
+| `1.x`          | `^3.4`       | JavaScript plugin (Node.js `>=22`) | [`v1`](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/tree/v1) (maintenance) |
 
 ## tl;dr
 This is a Tailwind CSS v3 plugin that allows you to add background grids and background dots in an easy and customizable way.
