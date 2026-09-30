@@ -1,0 +1,5 @@
+# ubuntu-26.04 is a GA GitHub-hosted runner (https://github.com/actions/runner-images)
+# not yet known by every actionlint release.
+self-hosted-runner:
+  labels:
+    - ubuntu-26.04

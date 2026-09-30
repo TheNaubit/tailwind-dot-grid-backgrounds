@@ -1,28 +1,49 @@
 name: Releases
+
 on:
   push:
-    branches:
-      - main
+    # "main" releases the current major, "v1" the Tailwind CSS v3 maintenance line.
+    branches: [main, v1]
+
+permissions: {}
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   changelog:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          # The changelog action configures its own authenticated remote to push the release commit and tag.
+          persist-credentials: false
+
+      # A personal access token is needed so the pushed tag and the created release trigger other workflows.
       - name: Conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v5
+        uses: TriPSs/conventional-changelog-action@469f0e5e35831fbd1962706f29f65daf0a5723f2 # v6.5.0
         with:
           github-token: ${{ secrets.PA_TOKEN }}
           version-file: "./package.json,./package-lock.json"
-      - name: create release
-        uses: actions/create-release@v1
+
+      - name: Create release
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
         env:
-          GITHUB_TOKEN: ${{ secrets.PA_TOKEN }}
-        with:
-          tag_name: ${{ steps.changelog.outputs.tag }}
-          release_name: ${{ steps.changelog.outputs.tag }}
-          body: ${{ steps.changelog.outputs.clean_changelog }}
+          GH_TOKEN: ${{ secrets.PA_TOKEN }}
+          TAG: ${{ steps.changelog.outputs.tag }}
+          NOTES: ${{ steps.changelog.outputs.clean_changelog }}
+          # Only releases from the default branch are marked as the repository's latest release.
+          LATEST: ${{ github.ref_name == github.event.repository.default_branch }}
+        run: |
+          printf '%s' "$NOTES" > "$RUNNER_TEMP/notes.md"
+          gh release create "$TAG" \
+            --title "$TAG" \
+            --notes-file "$RUNNER_TEMP/notes.md" \
+            --target "$GITHUB_SHA" \
+            --latest="$LATEST"
