@@ -13,6 +13,15 @@ updates:
       dev-dependencies:
         dependency-type: "development"
         update-types: ["minor", "patch"]
+    ignore:
+      # Matches the minimum supported Node.js major (22)
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+      # The next majors need Node.js 24.15+ (see AGENTS.md)
+      - dependency-name: "@semantic-release/changelog"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@semantic-release/git"
+        update-types: ["version-update:semver-major"]
     commit-message:
       prefix: "chore"
 
@@ -31,6 +40,12 @@ updates:
         update-types: ["minor", "patch"]
     ignore:
       - dependency-name: "tailwindcss"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@semantic-release/changelog"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@semantic-release/git"
         update-types: ["version-update:semver-major"]
     commit-message:
       prefix: "chore"
