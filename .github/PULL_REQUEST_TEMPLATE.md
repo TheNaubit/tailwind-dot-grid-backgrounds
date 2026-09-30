@@ -4,13 +4,13 @@
 
   Before submitting a pull request, please make sure the following is done:
 
-  1. Fork [the repository](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds) and create your branch from `main`.
+  1. Fork [the repository](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds) and create your branch from `main` (Tailwind CSS v4, `2.x`) or from `v1` (Tailwind CSS v3, `1.x`).
   2. Run `npm install` in the repository root.
   3. If you've fixed a bug or added code that should be tested, add tests!
-  4. Ensure the test suite passes (`npm run test`).
-  5. Format your code using Eslint.
+  4. Ensure the static analysis and the test suite pass (`npm run lint` and `npm run test:run`).
+  5. Use Conventional Commits for your commit messages (`fix: ...`, `feat: ...`).
 
-  Learn more about contributing: https://reactjs.org/docs/how-to-contribute.html
+  Learn more about contributing: ./CONTRIBUTING.md
 -->
 
 ## Summary

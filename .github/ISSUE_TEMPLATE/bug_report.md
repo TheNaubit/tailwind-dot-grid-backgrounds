@@ -23,6 +23,12 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
+**Versions (please complete the following information):**
+ - @nauverse/tailwind-dot-grid-backgrounds: [e.g. 2.0.0]
+ - Tailwind CSS: [e.g. 4.3.3]
+ - Node.js: [e.g. 24.21.0]
+ - Build tool: [e.g. Vite, @tailwindcss/postcss, Tailwind CLI]
+
 **Desktop (please complete the following information):**
  - OS: [e.g. iOS]
  - Browser [e.g. chrome, safari]
