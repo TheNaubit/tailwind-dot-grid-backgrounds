@@ -1,6 +1,6 @@
 {
   "name": "@nauverse/tailwind-dot-grid-backgrounds",
-  "description": "\ud83c\udfa8 A tiny Tailwind plugin to add dot and grid customizable backgrounds fast",
+  "description": "🎨 A tiny Tailwind plugin to add dot and grid customizable backgrounds fast",
   "author": {
     "name": "Albert Adler | @IAmAlbertAdler",
     "url": "https://albertadler.com"
@@ -23,7 +23,7 @@
     "grid-background",
     "dot-background"
   ],
-  "version": "1.2.13",
+  "version": "1.2.14",
   "type": "module",
   "main": "./dist/tailwind-dot-grid-backgrounds.umd.cjs",
   "module": "./dist/tailwind-dot-grid-backgrounds.js",

@@ -1,3 +1,10 @@
+## [1.2.14](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.13...v1.2.14) (2026-09-30)
+
+
+### Bug Fixes
+
+* generate valid utilities from custom theme values ([580314a](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/580314a1995535e023ffd8085fbf89da19eadd43))
+
 ## [1.2.13](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.12...v1.2.13) (2024-10-04)
 
 
@@ -40,6 +47,3 @@
 ### Bug Fixes
 
 * disabled publishing to jsr.io ([5992f1d](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/5992f1d4352ec64ef08cba778ea36a545df32357))
-
-
-
