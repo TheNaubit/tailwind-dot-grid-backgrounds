@@ -24,7 +24,7 @@
     "dot-background",
     "background-pattern"
   ],
-  "version": "1.2.13",
+  "version": "2.0.0",
   "type": "module",
   "style": "./index.css",
   "exports": {

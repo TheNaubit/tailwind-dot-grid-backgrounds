@@ -1,3 +1,22 @@
+# [2.0.0](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.13...v2.0.0) (2026-09-30)
+
+
+* feat!: rewrite the plugin as pure CSS for Tailwind CSS v4 ([dc90ce4](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/dc90ce4ab76dd8834e2465d70b69a4f9981c751f))
+
+
+### Bug Fixes
+
+* accept CSS variables in size utilities and decimal opacity ([49118da](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/49118da05a84ed84e304f5b55163ce484abc9d7a))
+* generate valid utilities from custom theme values ([580314a](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/580314a1995535e023ffd8085fbf89da19eadd43))
+
+
+### BREAKING CHANGES
+
+* requires Tailwind CSS v4 (use the 1.x line for
+Tailwind CSS v3) and replaces the bg-grid-<size>-s-<stroke>-<color>
+and bg-dot-<size>-s-<dot>-<color> classes. See the migration guide in
+the README.
+
 ## [1.2.13](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.12...v1.2.13) (2024-10-04)
 
 
@@ -40,6 +59,3 @@
 ### Bug Fixes
 
 * disabled publishing to jsr.io ([5992f1d](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/5992f1d4352ec64ef08cba778ea36a545df32357))
-
-
-
