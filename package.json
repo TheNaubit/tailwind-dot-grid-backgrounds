@@ -6,7 +6,7 @@
     "url": "https://albertadler.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/TheNaubit/tailwind-dot-grid-backgrounds",
+  "homepage": "https://github.com/TheNaubit/tailwind-dot-grid-backgrounds#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/TheNaubit/tailwind-dot-grid-backgrounds.git"
@@ -79,6 +79,7 @@
     }
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

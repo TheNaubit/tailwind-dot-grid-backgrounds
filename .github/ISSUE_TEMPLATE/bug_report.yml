@@ -1,0 +1,38 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: "2.0.0"
+    validations:
+      required: true
+  - type: input
+    id: tailwind
+    attributes:
+      label: Tailwind CSS version and integration
+      placeholder: "4.3.3 with @tailwindcss/vite"
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Include the classes you use and the CSS that imports Tailwind CSS and the plugin (or your `tailwind.config` plugins for 1.x).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+      description: Include the generated CSS if you can.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      description: Only if the CSS is generated but renders wrong.
+      placeholder: "Safari 26.1"

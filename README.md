@@ -13,6 +13,9 @@
   <a href="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/actions/workflows/ci.yml">
     <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI status">
   </a>
+  <a href="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/actions/workflows/release.yml">
+    <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/actions/workflows/release.yml/badge.svg?branch=main" alt="Release status">
+  </a>
   <a href="https://www.npmjs.com/package/@nauverse/tailwind-dot-grid-backgrounds">
     <img src="https://img.shields.io/npm/v/@nauverse/tailwind-dot-grid-backgrounds.svg?style=flat" alt="npm version">
   </a>
@@ -157,7 +160,7 @@ If you need any help using this plugin, feel free to [create a GitHub issue](htt
 
 ## Contribute
 
-Contributions of any kind (pull requests, bug reports, feature requests, documentation, design) are more than welcome! Read the [contributing guide](./CONTRIBUTING.md) to get started.
+Contributions of any kind (pull requests, bug reports, feature requests, documentation, design) are more than welcome! Read the [contributing guide](./CONTRIBUTING.md) to get started (and [AGENTS.md](./AGENTS.md) if you use a coding agent).
 
 ## Contributors
 
