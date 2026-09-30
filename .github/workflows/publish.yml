@@ -9,9 +9,11 @@ permissions: {}
 jobs:
   publish:
     runs-on: ubuntu-26.04
+    # Must match the environment configured in the npm trusted publisher settings.
+    environment: npm
     permissions:
       contents: read
-      # Required for npm provenance and npm trusted publishing (OIDC)
+      # npm trusted publishing (OIDC): no npm token is stored in the repository.
       id-token: write
     steps:
       - name: Checkout
@@ -27,6 +29,15 @@ jobs:
           registry-url: "https://registry.npmjs.org"
           # No dependency cache when building a release artifact (avoids cache poisoning)
           package-manager-cache: false
+
+      - name: Check npm version
+        # Trusted publishing requires npm 11.5.1 or later.
+        run: |
+          npm_version=$(npm --version)
+          if [ "$(printf '%s\n' 11.5.1 "$npm_version" | sort -V | head -n1)" != "11.5.1" ]; then
+            echo "::error::npm $npm_version does not support trusted publishing (11.5.1 or later required)"
+            exit 1
+          fi
 
       - name: Install dependencies
         run: npm ci
@@ -57,8 +68,8 @@ jobs:
             echo "tag=latest" >> "$GITHUB_OUTPUT"
           fi
 
+      # Authenticated with npm trusted publishing (OIDC), which also generates the provenance attestation.
       - name: Publish package on NPM
-        run: npm publish --provenance --access public --tag "$DIST_TAG"
+        run: npm publish --access public --tag "$DIST_TAG"
         env:
           DIST_TAG: ${{ steps.dist-tag.outputs.tag }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

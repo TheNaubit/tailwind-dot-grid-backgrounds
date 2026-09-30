@@ -7,7 +7,7 @@ Contributions of any kind (pull requests, bug reports, feature requests, documen
 - `main`: the latest major (`2.x`, Tailwind CSS v4, pure CSS).
 - `v1`: the maintenance line (`1.x`, Tailwind CSS v3, JavaScript plugin). Open fixes for Tailwind CSS v3 against this branch.
 
-Releases are automated: every push to `main` or `v1` generates the changelog, the tag and the GitHub release from the [Conventional Commits](https://www.conventionalcommits.org/) messages, and the release is then published to npm.
+Releases are automated: every push to `main` or `v1` generates the changelog, the tag and the GitHub release from the [Conventional Commits](https://www.conventionalcommits.org/) messages, and the release is then published to npm with [trusted publishing](https://docs.npmjs.com/trusted-publishers) (OIDC, no npm token) from `.github/workflows/publish.yml` in the `npm` environment.
 
 ### Building from source
 
