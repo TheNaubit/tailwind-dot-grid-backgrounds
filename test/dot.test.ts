@@ -45,6 +45,7 @@ describe("bg-dot-size-<value>", () => {
 	test.each([
 		["bg-dot-size-4", "calc(var(--spacing, 0.25rem) * 4)"],
 		["bg-dot-size-[20px]", "20px"],
+		["bg-dot-size-(--gap)", "var(--gap)"],
 	])("%s sets the distance between the dots", async (className, size) => {
 		expect(await dotRule(className)).toEqual({ "--bg-dot-size": size });
 	});
@@ -59,6 +60,7 @@ describe("bg-dot-radius-<value>", () => {
 		["bg-dot-radius-2", "2px"],
 		["bg-dot-radius-1.5", "1.5px"],
 		["bg-dot-radius-[0.2rem]", "0.2rem"],
+		["bg-dot-radius-(--r)", "var(--r)"],
 	])("%s sets the radius of the dots", async (className, radius) => {
 		expect(await dotRule(className)).toEqual({ "--bg-dot-radius": radius });
 	});

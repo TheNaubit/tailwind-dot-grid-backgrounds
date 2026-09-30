@@ -26,6 +26,13 @@ describe("bg-grid-<color>", () => {
 		);
 	});
 
+	test("supports a decimal opacity modifier", async () => {
+		const rule = await gridRule("bg-grid-blue-700/33.5");
+		expect(rule?.["--bg-grid-color"]).toBe(
+			"color-mix(in srgb, oklch(48.8% 0.243 264.376) calc(33.5 * 1%), transparent)",
+		);
+	});
+
 	test("supports an arbitrary opacity modifier", async () => {
 		const rule = await gridRule("bg-grid-blue-700/[35%]");
 		expect(rule?.["--bg-grid-color"]).toBe(
@@ -64,6 +71,8 @@ describe("bg-grid-size-<value>", () => {
 		["bg-grid-size-2.5", "calc(var(--spacing, 0.25rem) * 2.5)"],
 		["bg-grid-size-[18px]", "18px"],
 		["bg-grid-size-[3rem]", "3rem"],
+		["bg-grid-size-(--cell)", "var(--cell)"],
+		["bg-grid-size-[var(--cell)]", "var(--cell)"],
 	])("%s sets the size of the squares", async (className, size) => {
 		expect(await gridRule(className)).toEqual({ "--bg-grid-size": size });
 	});
@@ -78,7 +87,6 @@ describe("bg-grid-size-<value>", () => {
 
 	test("does not generate invalid sizes", async () => {
 		expect(await gridRule("bg-grid-size-foo")).toBeNull();
-		expect(await gridRule("bg-grid-size-[red]")).toBeNull();
 	});
 });
 
@@ -87,6 +95,7 @@ describe("bg-grid-stroke-<value>", () => {
 		["bg-grid-stroke-2", "2px"],
 		["bg-grid-stroke-0.5", "0.5px"],
 		["bg-grid-stroke-[0.1rem]", "0.1rem"],
+		["bg-grid-stroke-(--line)", "var(--line)"],
 	])("%s sets the width of the lines", async (className, stroke) => {
 		expect(await gridRule(className)).toEqual({ "--bg-grid-stroke": stroke });
 	});

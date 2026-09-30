@@ -78,9 +78,10 @@ A pattern is drawn by its color class. Its size and line (or dot) width are opti
 | `bg-grid-size-<number>` | The size of the squares, in spacing units (like `w-<number>`) | `8` (`2rem`) |
 | `bg-grid-stroke-<number>` | The width of the lines, in pixels | `1` (`1px`) |
 
-- `<color>` accepts any theme color (`neutral-950`, your own `--color-*` variables), `current`, an opacity modifier (`bg-grid-blue-700/80`, `bg-grid-blue-700/[35%]`), arbitrary values (`bg-grid-[#ff0000]`) and CSS variables (`bg-grid-(--my-color)`).
-- `bg-grid-size-*` also accepts `--spacing-*` theme keys (`bg-grid-size-cell` with `--spacing-cell: 18px`) and arbitrary lengths (`bg-grid-size-[18px]`).
-- `bg-grid-stroke-*` also accepts decimals (`bg-grid-stroke-0.5`) and arbitrary lengths (`bg-grid-stroke-[0.1rem]`).
+- `<color>` accepts any theme color (`neutral-950`, your own `--color-*` variables) with an optional opacity modifier (`bg-grid-blue-700/80`, `bg-grid-blue-700/[35%]`), arbitrary values (`bg-grid-[#ff0000]`), CSS variables (`bg-grid-(--my-color)`) and `current` (`bg-grid-current` has no opacity modifier: use `bg-grid-[color-mix(in_oklab,currentcolor_50%,transparent)]` instead).
+- `bg-grid-size-*` also accepts `--spacing-*` theme keys (`bg-grid-size-cell` with `--spacing-cell: 18px`), arbitrary lengths (`bg-grid-size-[18px]`) and CSS variables (`bg-grid-size-(--cell)`).
+- `bg-grid-stroke-*` also accepts decimals (`bg-grid-stroke-0.5`), arbitrary lengths (`bg-grid-stroke-[0.1rem]`) and CSS variables (`bg-grid-stroke-(--line)`).
+- Arbitrary values are not validated, like in Tailwind CSS itself: `bg-grid-[10px]` generates a class that draws nothing.
 
 #### Examples:
 `bg-grid-neutral-950 bg-grid-size-8 bg-grid-stroke-2`

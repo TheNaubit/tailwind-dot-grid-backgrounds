@@ -45,7 +45,7 @@
 /* The color of the grid lines (theme color, arbitrary value or CSS variable, with an optional opacity modifier). It also draws the grid. */
 @utility bg-grid-* {
 	--bg-grid-color: --value(--color-*, [color], [*]);
-	--bg-grid-color: --alpha(--value(--color-*, [color], [*]) / calc(--modifier(integer) * 1%));
+	--bg-grid-color: --alpha(--value(--color-*, [color], [*]) / calc(--modifier(number) * 1%));
 	--bg-grid-color: --alpha(--value(--color-*, [color], [*]) / --modifier([percentage]));
 	background-image: linear-gradient(to right, var(--bg-grid-color) var(--bg-grid-stroke, 1px), transparent var(--bg-grid-stroke, 1px)), linear-gradient(to bottom, var(--bg-grid-color) var(--bg-grid-stroke, 1px), transparent var(--bg-grid-stroke, 1px));
 	background-size: var(--bg-grid-size, --spacing(8)) var(--bg-grid-size, --spacing(8));
@@ -60,13 +60,13 @@
 /* The size of the grid squares: a multiple of the spacing scale, a spacing theme key or an arbitrary length. */
 @utility bg-grid-size-* {
 	--bg-grid-size: --spacing(--value(number));
-	--bg-grid-size: --value(--spacing-*, [length]);
+	--bg-grid-size: --value(--spacing-*, [length], [*]);
 }
 
 /* The width of the grid lines: a number of pixels or an arbitrary length. */
 @utility bg-grid-stroke-* {
 	--bg-grid-stroke: --value(number)px;
-	--bg-grid-stroke: --value([length]);
+	--bg-grid-stroke: --value([length], [*]);
 }
 
 /* ---------------------------------- Dots ---------------------------------- */
@@ -74,7 +74,7 @@
 /* The color of the dots (theme color, arbitrary value or CSS variable, with an optional opacity modifier). It also draws the dots. */
 @utility bg-dot-* {
 	--bg-dot-color: --value(--color-*, [color], [*]);
-	--bg-dot-color: --alpha(--value(--color-*, [color], [*]) / calc(--modifier(integer) * 1%));
+	--bg-dot-color: --alpha(--value(--color-*, [color], [*]) / calc(--modifier(number) * 1%));
 	--bg-dot-color: --alpha(--value(--color-*, [color], [*]) / --modifier([percentage]));
 	background-image: radial-gradient(var(--bg-dot-color) var(--bg-dot-radius, 1px), transparent var(--bg-dot-radius, 1px));
 	background-size: var(--bg-dot-size, --spacing(8)) var(--bg-dot-size, --spacing(8));
@@ -89,11 +89,11 @@
 /* The distance between the dots (in both axes): a multiple of the spacing scale, a spacing theme key or an arbitrary length. */
 @utility bg-dot-size-* {
 	--bg-dot-size: --spacing(--value(number));
-	--bg-dot-size: --value(--spacing-*, [length]);
+	--bg-dot-size: --value(--spacing-*, [length], [*]);
 }
 
 /* The radius of the dots: a number of pixels or an arbitrary length. */
 @utility bg-dot-radius-* {
 	--bg-dot-radius: --value(number)px;
-	--bg-dot-radius: --value([length]);
+	--bg-dot-radius: --value([length], [*]);
 }
