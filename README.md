@@ -4,143 +4,149 @@
 </h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/v1/images/header.png" alt="tailwind-dot-grid-backgrounds" />
+  <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/main/images/header.png" alt="tailwind-dot-grid-backgrounds: dot and grid backgrounds for Tailwind CSS" />
 </p>
 
-<h4 align="center">A tiny Tailwind CSS plugin to add dot and grid customizable backgrounds fast</h4>
+<h4 align="center">A tiny Tailwind CSS plugin to add customizable dot and grid backgrounds fast, in pure CSS</h4>
 
 <p align="center">
   <a href="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/actions/workflows/ci.yml">
-    <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/actions/workflows/ci.yml/badge.svg?branch=v1" alt="CI status">
+    <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI status">
   </a>
   <a href="https://www.npmjs.com/package/@nauverse/tailwind-dot-grid-backgrounds">
-    <img src="https://img.shields.io/npm/v/@nauverse/tailwind-dot-grid-backgrounds/v1.svg?style=flat&label=npm%40v1" alt="npm version">
+    <img src="https://img.shields.io/npm/v/@nauverse/tailwind-dot-grid-backgrounds.svg?style=flat" alt="npm version">
   </a>
-  <a href="https://bundlephobia.com/result?p=@nauverse/tailwind-dot-grid-backgrounds">
-    <img src="https://img.shields.io/bundlephobia/minzip/%40nauverse/tailwind-dot-grid-backgrounds" alt="minzipped size">
+  <a href="https://www.npmjs.com/package/@nauverse/tailwind-dot-grid-backgrounds">
+    <img src="https://img.shields.io/npm/l/@nauverse/tailwind-dot-grid-backgrounds.svg?style=flat" alt="license">
   </a>
 </p>
 
 <p align="center">
-  <a href="#what">What?</a> •
+  <a href="#tldr">tl;dr</a> •
   <a href="#guide-and-examples">Guide and examples</a> •
+  <a href="#migrating-from-v1">Migrating from v1</a> •
   <a href="#help">Help</a> •
   <a href="#contribute">Contribute</a>
 </p>
 
-> [!IMPORTANT]
-> **This is the `v1` line of the plugin, for Tailwind CSS v3.**
->
-> Using **Tailwind CSS v4**? Use the latest version instead (`v2` and later). It is a pure CSS plugin with no JavaScript, loaded with `@import "@nauverse/tailwind-dot-grid-backgrounds";`. See the [main branch README](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds#readme) for its guide and the migration steps.
+| Plugin version | Tailwind CSS | How it works | Branch |
+| -------------- | ------------ | ------------ | ------ |
+| `2.x` (latest) | `^4.0`       | Pure CSS (`@utility`), no JavaScript | [`main`](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/tree/main) |
+| `1.x`          | `^3.4`       | JavaScript plugin | [`v1`](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/tree/v1) (maintenance, [docs](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/tree/v1#readme)) |
 
-| Plugin version | Tailwind CSS | Node.js | Branch |
-| -------------- | ------------ | ------- | ------ |
-| `2.x`          | `>=4.1`      | Same as Tailwind CSS v4 | [`main`](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/tree/main) |
-| `1.x`          | `^3.4`       | `>=22`  | [`v1`](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/tree/v1) (maintenance) |
+Still on Tailwind CSS v3? Install the `v1` line: `npm install --save-dev @nauverse/tailwind-dot-grid-backgrounds@1`.
 
 ## tl;dr
-This is a Tailwind CSS v3 plugin that allows you to add background grids and background dots in an easy and customizable way.
+This is a Tailwind CSS v4 plugin that allows you to add background grids and background dots in an easy and customizable way.
 
 ### 1. Install the dependency
 ```bash
-npm install --save-dev @nauverse/tailwind-dot-grid-backgrounds@1
+npm install --save-dev @nauverse/tailwind-dot-grid-backgrounds
 ```
 
-### 2. Add the plugin to your Tailwind CSS config
-`tailwind.config.ts` / `tailwind.config.mjs`:
-```ts
-import dotGridBackgrounds from "@nauverse/tailwind-dot-grid-backgrounds";
-import type { Config } from "tailwindcss";
-
-export default {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
-  plugins: [
-    dotGridBackgrounds,
-    // ... the rest of your Tailwind CSS plugins
-  ],
-} satisfies Config;
-```
-
-Or, with a CommonJS `tailwind.config.js`:
-```js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
-  plugins: [
-    require("@nauverse/tailwind-dot-grid-backgrounds"),
-    // ... the rest of your Tailwind CSS plugins
-  ],
-};
+### 2. Import it in your CSS, after Tailwind CSS
+```css
+@import "tailwindcss";
+@import "@nauverse/tailwind-dot-grid-backgrounds";
 ```
 
 ### 3. You are done!
 Try it by adding this HTML to your UI:
 ```html
-<div class="h-screen w-screen bg-yellow-300 bg-grid-8-s-2-neutral-950"></div>
+<div class="h-screen w-screen bg-yellow-300 bg-grid-neutral-950 bg-grid-size-8 bg-grid-stroke-2"></div>
 ```
 
 ## What
 You could achieve the same by just using some Tailwind CSS code but... I found myself adding this kind of background in my projects very often. So I created a small Tailwind CSS plugin to allow me adding these backgrounds while keeping all the customization offered by Tailwind CSS.
 
 ### Features
-- Fully integrated with Tailwind CSS: it uses your theme colors, widths and border widths
-- Performant: the backgrounds are rendered with CSS gradients, no images
+- Fully integrated with Tailwind CSS: theme colors, opacity modifiers, the spacing scale, arbitrary values and every variant (`hover:`, `md:`, `dark:`...)
+- Pure CSS: just an `@import`, no JavaScript and no configuration
+- Performant: the backgrounds are CSS gradients, and only the classes you use are generated
 - Zero dependencies
-- Tested
-- Easy to use, straight to the point
+- Tested against the latest and the oldest supported Tailwind CSS v4 releases
 
 ## Guide and examples
 
-### Background Grid
-Pattern: `bg-grid-<SIZE>-s-<STROKE_WIDTH>-<COLOR>`
+A pattern is drawn by its color class. Its size and line (or dot) width are optional classes that you can combine with it, so each part can change on its own with variants (for example `md:bg-grid-size-12`).
 
-- `<SIZE>` is the size of the grid squares. It accepts the keys of the `width` theme whose value is in `px` or `rem` (such as `8`, `0.5`, `px`...). You will see the available options in IntelliSense.
-- `<STROKE_WIDTH>` is the width of the strokes of the grid squares. It accepts the keys of the `borderWidth` theme whose value is in `px` or `rem` (such as `0`, `2`, `4`, `8`), plus `1` (since Tailwind CSS does not have a `border-1` class).
-- `<COLOR>` is the color of the strokes. It accepts any color of your theme, an opacity modifier (`/50`) and arbitrary values (`[#ff0000]`).
+### Background grid
 
-#### Examples:
-`bg-grid-8-s-2-neutral-950`
-<p align="center">
-  <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-grid-8-s-2-neutral-950.png" alt="tailwind-dot-grid-backgrounds bg-grid-8-s-2-neutral-950" />
-</p>
+| Class | What it sets | Default |
+| ----- | ------------ | ------- |
+| `bg-grid-<color>` | Draws the grid with this line color | - |
+| `bg-grid-size-<number>` | The size of the squares, in spacing units (like `w-<number>`) | `8` (`2rem`) |
+| `bg-grid-stroke-<number>` | The width of the lines, in pixels | `1` (`1px`) |
 
-`bg-grid-48-s-8-blue-700/80`
-<p align="center">
-  <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-grid-48-s-8-blue-700_80.png" alt="tailwind-dot-grid-backgrounds bg-grid-48-s-8-blue-700/80" />
-</p>
-
-### Background Dots
-Pattern: `bg-dot-<SIZE>-s-<DOT_SIZE>-<COLOR>`
-
-- `<SIZE>` is the size of the space (in both axes) between the dots. It accepts the keys of the `width` theme whose value is in `px` or `rem`. You will see the available options in IntelliSense.
-- `<DOT_SIZE>` is the radius of the dots. It accepts the keys of the `borderWidth` theme whose value is in `px` or `rem`, plus `1`.
-- `<COLOR>` is the color of the dots. It accepts any color of your theme, an opacity modifier (`/50`) and arbitrary values (`[#ff0000]`).
+- `<color>` accepts any theme color (`neutral-950`, your own `--color-*` variables), `current`, an opacity modifier (`bg-grid-blue-700/80`, `bg-grid-blue-700/[35%]`), arbitrary values (`bg-grid-[#ff0000]`) and CSS variables (`bg-grid-(--my-color)`).
+- `bg-grid-size-*` also accepts `--spacing-*` theme keys (`bg-grid-size-cell` with `--spacing-cell: 18px`) and arbitrary lengths (`bg-grid-size-[18px]`).
+- `bg-grid-stroke-*` also accepts decimals (`bg-grid-stroke-0.5`) and arbitrary lengths (`bg-grid-stroke-[0.1rem]`).
 
 #### Examples:
-`bg-dot-8-s-2-neutral-950`
+`bg-grid-neutral-950 bg-grid-size-8 bg-grid-stroke-2`
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-dot-8-s-2-neutral-950.png" alt="tailwind-dot-grid-backgrounds bg-dot-8-s-2-neutral-950" />
+  <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-grid-8-s-2-neutral-950.png" alt="bg-grid-neutral-950 bg-grid-size-8 bg-grid-stroke-2" />
 </p>
 
-`bg-dot-16-s-8-blue-700/80`
+`bg-grid-blue-700/80 bg-grid-size-48 bg-grid-stroke-8`
 <p align="center">
-  <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-dot-16-s-8-blue-700_80.png" alt="tailwind-dot-grid-backgrounds bg-dot-16-s-8-blue-700/80" />
+  <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-grid-48-s-8-blue-700_80.png" alt="bg-grid-blue-700/80 bg-grid-size-48 bg-grid-stroke-8" />
+</p>
+
+### Background dots
+
+| Class | What it sets | Default |
+| ----- | ------------ | ------- |
+| `bg-dot-<color>` | Draws the dots with this color | - |
+| `bg-dot-size-<number>` | The distance between the dots (in both axes), in spacing units | `8` (`2rem`) |
+| `bg-dot-radius-<number>` | The radius of the dots, in pixels | `1` (`1px`) |
+
+They accept the same values as their grid counterparts.
+
+#### Examples:
+`bg-dot-neutral-950 bg-dot-size-8 bg-dot-radius-2`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-dot-8-s-2-neutral-950.png" alt="bg-dot-neutral-950 bg-dot-size-8 bg-dot-radius-2" />
+</p>
+
+`bg-dot-blue-700/80 bg-dot-size-16 bg-dot-radius-8`
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-dot-16-s-8-blue-700_80.png" alt="bg-dot-blue-700/80 bg-dot-size-16 bg-dot-radius-8" />
 </p>
 
 ### Customizing
-The plugin reads your theme, so extending it adds new classes:
+Everything comes from your Tailwind CSS theme:
 
-```ts
-export default {
-  theme: {
-    extend: {
-      colors: { brand: { DEFAULT: "#123456", soft: "#abcdef" } }, // bg-grid-8-s-1-brand, bg-dot-8-s-1-brand-soft
-      width: { cell: "18px" }, // bg-grid-cell-s-1-red-500
-      borderWidth: { thick: "3px" }, // bg-grid-8-s-thick-red-500
-    },
-  },
-} satisfies Config;
+```css
+@import "tailwindcss";
+@import "@nauverse/tailwind-dot-grid-backgrounds";
+
+@theme {
+  --color-brand: #123456; /* bg-grid-brand, bg-dot-brand/50 */
+  --spacing-cell: 18px; /* bg-grid-size-cell */
+}
 ```
+
+The pattern settings are stored in the `--bg-grid-color`, `--bg-grid-size`, `--bg-grid-stroke`, `--bg-dot-color`, `--bg-dot-size` and `--bg-dot-radius` CSS variables. They are registered with `@property` as non-inherited, so a pattern never leaks into the patterns of its children.
+
+## Migrating from v1
+
+Version 2 is for Tailwind CSS v4. It is a pure CSS plugin, and each part of a pattern is now its own class.
+
+1. Upgrade to Tailwind CSS v4 ([upgrade guide](https://tailwindcss.com/docs/upgrade-guide)).
+2. Install the latest version: `npm install --save-dev @nauverse/tailwind-dot-grid-backgrounds@latest`.
+3. Remove the plugin from your `tailwind.config.*` `plugins` (or the `@plugin` directive) and add `@import "@nauverse/tailwind-dot-grid-backgrounds";` after `@import "tailwindcss";`.
+4. Replace the classes. `<SIZE>`, `<STROKE_WIDTH>`/`<DOT_SIZE>` and `<COLOR>` keep the same values:
+
+| v1 | v2 |
+| -- | -- |
+| `bg-grid-<SIZE>-s-<STROKE_WIDTH>-<COLOR>` | `bg-grid-<COLOR> bg-grid-size-<SIZE> bg-grid-stroke-<STROKE_WIDTH>` |
+| `bg-dot-<SIZE>-s-<DOT_SIZE>-<COLOR>` | `bg-dot-<COLOR> bg-dot-size-<SIZE> bg-dot-radius-<DOT_SIZE>` |
+| `bg-grid-8-s-2-neutral-950` | `bg-grid-neutral-950 bg-grid-size-8 bg-grid-stroke-2` |
+| `bg-dot-16-s-8-blue-700/80` | `bg-dot-blue-700/80 bg-dot-size-16 bg-dot-radius-8` |
+| `bg-grid-px-s-1-red-500` | `bg-grid-red-500 bg-grid-size-[1px]` |
+
+Sizes now follow your spacing scale (`--spacing`) instead of being converted to pixels, and the stroke width and dot radius default to `1px`, so `bg-grid-<COLOR> bg-grid-size-<SIZE>` is enough for 1px lines.
 
 ## Help
 
@@ -150,7 +156,7 @@ If you need any help using this plugin, feel free to [create a GitHub issue](htt
 
 ## Contribute
 
-Contributions of any kind (pull requests, bug reports, feature requests, documentation, design) are more than welcome! Read the [contributing guide](./CONTRIBUTING.md) to get started. Fixes for the Tailwind CSS v3 line go to the `v1` branch.
+Contributions of any kind (pull requests, bug reports, feature requests, documentation, design) are more than welcome! Read the [contributing guide](./CONTRIBUTING.md) to get started.
 
 ## Contributors
 

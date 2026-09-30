@@ -28,7 +28,9 @@ cd tailwind-dot-grid-backgrounds
 npm install
 ```
 
-You can then run the static analysis, the type check and the unit tests to verify that everything works correctly:
+There is no build step on `main`: the published package is the `index.css` file.
+
+You can then run the static analysis, the type check and the tests to verify that everything works correctly:
 
 ```
 npm run lint
@@ -36,13 +38,17 @@ npm run typecheck
 npm run test:run
 ```
 
-And finally, build the library:
+The tests compile real Tailwind CSS v4 stylesheets that import the plugin. `test/smoke.test.ts` only checks what does not change between Tailwind CSS releases: CI also runs it against the oldest supported release.
+
+### Header image
+
+`images/header.png` is rendered from `images/header.html` with the plugin itself and headless Google Chrome:
 
 ```
-npm run build
+node scripts/render-header.mjs
 ```
 
-The output will appear in the `dist` directory.
+Set `CHROME_PATH` if Chrome is not installed in its default macOS location.
 
 ### Commits
 

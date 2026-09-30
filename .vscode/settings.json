@@ -28,11 +28,6 @@
 	"editor.matchBrackets": "always",
 	"editor.stickyScroll.enabled": true,
 	"editor.wordWrap": "on",
-	"eslint.workingDirectories": [
-		{
-			"mode": "auto"
-		}
-	],
 	"files.eol": "\n",
 	"html.autoClosingTags": true,
 	"javascript.autoClosingTags": true,
