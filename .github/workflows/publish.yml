@@ -43,7 +43,11 @@ jobs:
         run: |
           name=$(node -p "require('./package.json').name")
           version=$(node -p "require('./package.json').version")
-          latest=$(npm view "$name" version 2>/dev/null || echo "0.0.0")
+          # Fail on any registry error (it could wrongly move "latest"), except when the package was never published.
+          if ! latest=$(npm view "$name" version 2>npm-view.err); then
+            grep -q E404 npm-view.err || { cat npm-view.err; exit 1; }
+            latest="0.0.0"
+          fi
           if [ "${version%%.*}" -lt "${latest%%.*}" ]; then
             echo "tag=v${version%%.*}" >> "$GITHUB_OUTPUT"
           else
