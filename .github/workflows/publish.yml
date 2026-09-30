@@ -37,9 +37,6 @@ jobs:
       - name: Run tests
         run: npm run test:run
 
-      - name: Build
-        run: npm run build
-
       # Releases of an older major (e.g. the v1 maintenance line) must not move the "latest" dist-tag.
       - name: Resolve npm dist-tag
         id: dist-tag
