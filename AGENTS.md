@@ -49,7 +49,12 @@ tsconfig.build.json     declaration emit
 
 - Use Conventional Commits: `fix:`, `docs:`, `test:`, `chore:`, `ci:`. Never use a breaking change (`!` or `BREAKING CHANGE`) here: this branch only releases `1.x`.
 - Do not add "Co-Authored-By" or similar lines to commit messages.
-- `semantic-release` runs in `.github/workflows/release.yml`. This branch is a maintenance branch (`1.x`) published under the npm dist-tag `v1`, so it never moves `latest`. Do not bump `version` by hand.
+- `semantic-release` runs in `.github/workflows/release.yml`. This branch is a maintenance branch (`1.x`) published under the npm dist-tag `release-v1` (semantic-release prefixes channels that look like a version range), so it never moves `latest`. Do not bump `version` by hand.
 - Publishing uses npm trusted publishing (OIDC) for `TheNaubit/tailwind-dot-grid-backgrounds`, `release.yml` and the `npm` environment. There is no `NPM_TOKEN` or personal access token. Do not add one.
 - Every action is pinned to a commit SHA with the version in a comment. Check workflows with `actionlint` and `zizmor`.
 - Dependabot and the issue forms are configured on `main` (GitHub only reads them from the default branch).
+
+## Gotchas
+
+- npm trusted publishing (OIDC) can publish but cannot change dist-tags (`npm dist-tag add` returns 401). semantic-release only needs that when it adds an existing version to another channel, which the normal flow does not do.
+- semantic-release stores the channels of each release in git notes (`refs/notes/semantic-release-<tag>`) on the tagged commit. `v1.2.13` and older are annotated tags from the previous release tool: semantic-release attached its note to the tag object, where it cannot read it back. The note for `v1.2.13` was added to its commit by hand. Do not delete the notes refs.

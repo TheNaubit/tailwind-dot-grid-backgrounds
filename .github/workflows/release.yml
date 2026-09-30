@@ -2,7 +2,7 @@ name: Release
 
 on:
   push:
-    # "main" releases the current major, "v1" the Tailwind CSS v3 maintenance line (npm dist-tag "v1").
+    # "main" releases the current major, "v1" the Tailwind CSS v3 maintenance line (npm dist-tag "release-v1").
     branches: [main, v1]
 
 permissions: {}

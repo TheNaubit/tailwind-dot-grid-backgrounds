@@ -14,7 +14,7 @@
     <img src="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/actions/workflows/ci.yml/badge.svg?branch=v1" alt="CI status">
   </a>
   <a href="https://www.npmjs.com/package/@nauverse/tailwind-dot-grid-backgrounds">
-    <img src="https://img.shields.io/npm/v/@nauverse/tailwind-dot-grid-backgrounds/v1.svg?style=flat&label=npm%40v1" alt="npm version">
+    <img src="https://img.shields.io/npm/v/@nauverse/tailwind-dot-grid-backgrounds/release-v1.svg?style=flat&label=npm%40v1" alt="npm version">
   </a>
   <a href="https://bundlephobia.com/result?p=@nauverse/tailwind-dot-grid-backgrounds">
     <img src="https://img.shields.io/bundlephobia/minzip/%40nauverse/tailwind-dot-grid-backgrounds" alt="minzipped size">

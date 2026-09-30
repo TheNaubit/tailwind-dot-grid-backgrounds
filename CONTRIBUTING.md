@@ -7,7 +7,7 @@ Contributions of any kind (pull requests, bug reports, feature requests, documen
 - `main`: the latest major (`2.x`, Tailwind CSS v4, pure CSS).
 - `v1`: the maintenance line (`1.x`, Tailwind CSS v3, JavaScript plugin). Open fixes for Tailwind CSS v3 against this branch.
 
-Releases are automated with [semantic-release](https://semantic-release.gitbook.io/): every push to `main` or `v1` runs `.github/workflows/release.yml`, which computes the version from the [Conventional Commits](https://www.conventionalcommits.org/) messages, updates `CHANGELOG.md`, tags, creates the GitHub release and publishes to npm with [trusted publishing](https://docs.npmjs.com/trusted-publishers) (OIDC, in the `npm` environment). It only needs the built-in `GITHUB_TOKEN`. Releases from `v1` are published under the `v1` npm dist-tag.
+Releases are automated with [semantic-release](https://semantic-release.gitbook.io/): every push to `main` or `v1` runs `.github/workflows/release.yml`, which computes the version from the [Conventional Commits](https://www.conventionalcommits.org/) messages, updates `CHANGELOG.md`, tags, creates the GitHub release and publishes to npm with [trusted publishing](https://docs.npmjs.com/trusted-publishers) (OIDC, in the `npm` environment). It only needs the built-in `GITHUB_TOKEN`. Releases from `v1` are published under the `release-v1` npm dist-tag.
 
 ### Building from source
 
