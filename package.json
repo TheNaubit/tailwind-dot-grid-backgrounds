@@ -50,18 +50,18 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.14",
+    "@biomejs/biome": "2.5.15",
     "@commitlint/cli": "21.2.3",
     "@commitlint/config-conventional": "21.2.3",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@tailwindcss/node": "4.3.3",
-    "@types/node": "24.19.0",
+    "@types/node": "24.19.1",
     "husky": "9.1.7",
     "semantic-release": "25.0.9",
     "tailwindcss": "4.3.3",
     "typescript": "7.0.2",
-    "vitest": "5.0.2"
+    "vitest": "5.0.3"
   },
   "peerDependencies": {
     "tailwindcss": "^4.0.0"
