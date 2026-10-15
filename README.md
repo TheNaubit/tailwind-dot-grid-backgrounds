@@ -7,7 +7,7 @@
   <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/main/images/header.png" alt="tailwind-dot-grid-backgrounds: dot and grid backgrounds for Tailwind CSS" />
 </p>
 
-<h4 align="center">A tiny Tailwind CSS plugin to add customizable dot and grid backgrounds fast, in pure CSS</h4>
+<h4 align="center">A tiny Tailwind CSS plugin to add customizable dot, grid and stripe backgrounds fast, in pure CSS</h4>
 
 <p align="center">
   <a href="https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/actions/workflows/ci.yml">
@@ -116,6 +116,33 @@ They accept the same values as their grid counterparts.
 `bg-dot-blue-700/80 bg-dot-size-16 bg-dot-radius-8`
 <p align="center">
   <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-dot-16-s-8-blue-700_80.png" alt="bg-dot-blue-700/80 bg-dot-size-16 bg-dot-radius-8" />
+</p>
+
+### Background stripes
+
+| Class                         | What it sets                                                         | Default      |
+| ----------------------------- | -------------------------------------------------------------------- | ------------ |
+| `bg-stripe-<color>`           | Draws the stripes with this line color                               | -            |
+| `bg-stripe-size-<number>`     | The distance between the lines, in spacing units (like `w-<number>`) | `8` (`2rem`) |
+| `bg-stripe-stroke-<number>`   | The width of the lines, in pixels                                    | `1` (`1px`)  |
+| `bg-stripe-rotation-<number>` | The angle of the stripes, in deg                                     | `0` (`0deg`) |
+
+They accept the same values as their grid counterparts and also:
+
+- `bg-stripe-rotation-*` only acceps numbers, arbitrary deg values and variables with an angle value.
+
+#### Examples:
+
+`bg-stripe-neutral-950 bg-grid-stripe-8 bg-stripe-stroke-2 bg-stripe-rotation-45`
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-stripe-8-s-2-r-45-neutral-950.png" alt="bg-stripe-neutral-950 bg-stripe-size-8 bg-stripe-stroke-2 bg-stripe-rotation-45" />
+</p>
+
+`bg-stripe-blue-700/80 bg-stripe-size-16 bg-grid-stroke-8 bg-stripe-rotation-45`
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TheNaubit/tailwind-dot-grid-backgrounds/f3e4cac4117dee081ed982739d3c38ff12544869/images/bg-stripe-16-s-8-r-45-blue-700_80.png" alt="bg-stipe-blue-700/80 bg-stripe-size-16 bg-grid-stroke-8 bg-stripe-rotation-45" />
 </p>
 
 ### Customizing
