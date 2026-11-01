@@ -57,20 +57,20 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.14",
-    "@commitlint/cli": "21.2.3",
-    "@commitlint/config-conventional": "21.2.3",
+    "@biomejs/biome": "2.6.3",
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@types/node": "24.19.0",
-    "@vitest/coverage-v8": "5.0.2",
+    "@types/node": "24.19.2",
+    "@vitest/coverage-v8": "5.0.5",
     "husky": "9.1.7",
-    "postcss": "8.5.28",
+    "postcss": "8.5.31",
     "semantic-release": "25.0.9",
     "tailwindcss": "3.4.19",
     "typescript": "7.0.2",
-    "vite": "8.3.1",
-    "vitest": "5.0.2"
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
   },
   "peerDependencies": {
     "tailwindcss": "^3.4.0"
