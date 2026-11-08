@@ -1,5 +1,5 @@
 {
-	"$schema": "https://biomejs.dev/schemas/2.5.14/schema.json",
+	"$schema": "https://biomejs.dev/schemas/2.6.3/schema.json",
 	"assist": { "actions": { "source": { "organizeImports": "on" } } },
 	"files": {
 		"includes": [
@@ -10,7 +10,8 @@
 			"!**/coverage",
 			"!**/*.d.ts",
 			"!**/*.json",
-			"!**/vite.config.ts"
+			"!**/vite.config.ts",
+			"!**/*.md"
 		]
 	},
 	"vcs": {
