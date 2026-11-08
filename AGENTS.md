@@ -27,6 +27,7 @@ test/
   utils.ts                 compiles CSS with @tailwindcss/node, the way users import the plugin
   grid.test.ts             bg-grid-* utilities (exact output, latest Tailwind CSS)
   dot.test.ts              bg-dot-* utilities (exact output, latest Tailwind CSS)
+  dot.test.ts              bg-stripe-* utilities (exact output, latest Tailwind CSS)
   integration.test.ts      variants, theme customization, @property, core utilities
   smoke.test.ts            version-independent checks, also run on Tailwind CSS 4.0.0 in CI
 images/header.html         source of images/header.png

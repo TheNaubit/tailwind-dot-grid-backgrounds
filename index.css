@@ -40,6 +40,26 @@
 	inherits: false;
 }
 
+@property --bg-stripe-color {
+	syntax: "*";
+	inherits: false;
+}
+
+@property --bg-stripe-size {
+	syntax: "*";
+	inherits: false;
+}
+
+@property --bg-stripe-stroke {
+	syntax: "*";
+	inherits: false;
+}
+
+@property --bg-stripe-rotation {
+	syntax: "*";
+	inherits: false;
+}
+
 /* ---------------------------------- Grid ---------------------------------- */
 
 /* The color of the grid lines (theme color, arbitrary value or CSS variable, with an optional opacity modifier). It also draws the grid. */
@@ -96,4 +116,42 @@
 @utility bg-dot-radius-* {
 	--bg-dot-radius: --value(number)px;
 	--bg-dot-radius: --value([length], [*]);
+}
+
+/* ---------------------------------- Stipes ---------------------------------- */
+
+/* Stripe colors */
+@utility bg-stripe-* {
+	--bg-stripe-color: --value(--color-*, [color], [*]);
+	--bg-stripe-color: --alpha(--value(--color-*, [color], [*]) / calc(--modifier(number) * 1%));
+	--bg-stripe-color: --alpha(--value(--color-*, [color], [*]) / --modifier([percentage]));
+	background-image: repeating-linear-gradient(var(--bg-stripe-rotation, 0deg), var(--bg-stripe-color) 0 var(--bg-stripe-stroke, 1px), transparent var(--bg-stripe-stroke, 1px) var(--bg-stripe-size, --spacing(8)));
+}
+
+@utility bg-stripe-current {
+	--bg-stripe-color: currentcolor;
+	background-image: repeating-linear-gradient(var(--bg-stripe-rotation, 0deg), var(--bg-stripe-color) 0 var(--bg-stripe-stroke, 1px), transparent var(--bg-stripe-stroke, 1px) var(--bg-stripe-size, --spacing(8)));
+}
+
+/* Spacing between stripes */
+@utility bg-stripe-size-* {
+	--bg-stripe-size: --spacing(--value(number));
+	--bg-stripe-size: --value(--spacing-*, [length], [*]);
+}
+
+/* Line thickness */
+@utility bg-stripe-stroke-* {
+	--bg-stripe-stroke: --value(number)px;
+	--bg-stripe-stroke: --value([length], [*]);
+}
+
+/* Rotation of the whole grid */
+@utility bg-stripe-rotation-* {
+	--bg-stripe-rotation: --value(number)deg;
+	--bg-stripe-rotation: --value([angle]);
+}
+
+@utility -bg-stripe-rotation-* {
+	--bg-stripe-rotation: calc(--value(number) * -1deg);
+	--bg-stripe-rotation: calc(--value([angle]) * -1);
 }
