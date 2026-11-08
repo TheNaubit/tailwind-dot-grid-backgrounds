@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v2.0.0...v2.0.1) (2026-11-08)
+
+
+### Bug Fixes
+
+* **deps:** consolidate Dependabot updates into one lockfile ([a280b6d](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/a280b6d8555ac98a632621096d0d4c4371195884)), closes [#80](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/issues/80) [#83](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/issues/83) [#84](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/issues/84) [#85](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/issues/85) [#86](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/issues/86) [#84](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/issues/84)
+
 # [2.0.0](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.13...v2.0.0) (2026-09-30)
 
 
