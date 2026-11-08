@@ -1,3 +1,10 @@
+## [1.2.15](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.14...v1.2.15) (2026-11-08)
+
+
+### Bug Fixes
+
+* **deps:** update v1 dev dependencies and keep Biome off Markdown ([8eec9aa](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/commit/8eec9aa1fb7d2b1c43a59c41749fb1e5c05b1dba))
+
 ## [1.2.14](https://github.com/TheNaubit/tailwind-dot-grid-backgrounds/compare/v1.2.13...v1.2.14) (2026-09-30)
 
 
